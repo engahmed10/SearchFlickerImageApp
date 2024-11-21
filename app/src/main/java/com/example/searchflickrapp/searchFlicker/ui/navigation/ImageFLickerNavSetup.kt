@@ -28,7 +28,7 @@ fun ImageFlickderNavSetup(navController: NavHostController, modifier: Modifier) 
             val moshi = Moshi.Builder().add(KotlinJsonAdapterFactory()).build()
             val jsonAdapter = moshi.adapter(Item::class.java)
             val imageObject = imageJson?.let { jsonAdapter.fromJson(it) }
-            ImageDetailsScreen(navController, modifier, imageObject)
+            ImageDetailsScreen(modifier, imageObject)
         }
     }
 }

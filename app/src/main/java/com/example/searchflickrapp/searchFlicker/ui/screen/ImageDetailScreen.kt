@@ -8,8 +8,10 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.material3.Card
 import androidx.compose.material3.Text
+import androidx.compose.material3.Text as Material3Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.viewinterop.AndroidView
 import androidx.core.text.HtmlCompat
@@ -20,8 +22,9 @@ import com.example.searchflickrapp.searchFlicker.data.response.Item
 
 @SuppressLint("SetTextI18n")
 @Composable
-fun ImageDetailsScreen(navController: NavHostController, modifier: Modifier, image: Item?) {
+fun ImageDetailsScreen(modifier: Modifier, image: Item?) {
     Card {
+
         val imageUrl = image?.media?.m
         Column {
             if (imageUrl != null) {

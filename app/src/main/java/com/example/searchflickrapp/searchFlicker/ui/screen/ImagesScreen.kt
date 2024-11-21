@@ -69,7 +69,7 @@ fun ImageScreen(
             },
             modifier = Modifier.fillMaxWidth()
         ) {
-            Text("Enter The City Name, please")
+            Text("Enter image flicker name, please")
         }
         if (searchClicked.value) {
             LaunchedEffect(Unit) {
